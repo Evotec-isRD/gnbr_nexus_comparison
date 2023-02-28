@@ -5,9 +5,9 @@
 This is code that accompanies a paper that is currently being submitted to PLOS ONE. 
 
 The title of the paper is:
-["A large-scale evaluation of NLP-derived chemical-gene/protein relationships from the scientific literature: 
-implications for knowledge graph construction"](https://evoteccloud.sharepoint.com/:w:/t/company/isR&D/DataScience/ET3LIqzBDMlNrjvDJcIeetUBCRIgoaaa_3aXQj5yv1a0iw?e=F4kWmo)
-(the link is to sharepoint - it will be to the paper DOI when it is published)
+"A large-scale evaluation of NLP-derived chemical-gene/protein relationships from the scientific literature: 
+implications for knowledge graph construction" 
+(this will be a link to the paper DOI when it is published)
 
 Our paper compares chemicals (small molecules) and proteins 'triples', such as "aspirin-INHIBITS-cyclooxygenase" between 
 the NLP-derived dataset ["the Global Network of Biological Relationships (GNBR)"](https://academic.oup.com/bioinformatics/article/34/15/2614/4911883) 
