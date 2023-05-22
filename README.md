@@ -43,7 +43,7 @@ Nexus data processed to include a compound ID with all known name synonyms of th
 
 ## Instructions on running the code
 1. Clone this project using your standard process
-2. pip install the dependencies: "pip install -r requirements.txt"
+2. pip install the dependencies: "pip install -r requirements.txt" (use python=3.9)
 3. run the main.py file: "python src/main.py" (this could take up to 30 minutes to run - watch the log!)
 
 ## Outputs
