@@ -1,0 +1,20 @@
+GENE->DISEASE
+
+DRUG->PROTEIN
+the below is the DTI original refs from bioGPT
+https://www.dropbox.com/sh/0e52w6p7wiek9ab/AADfoBOTAUOJOaP6Yxfq75R-a?dl=0&lst=
+https://academic.oup.com/bioinformatics/article/38/22/5100/6751771
+
+
+GOOD RESOURCES THAT CONTAIN ALL TYPES
+https://github.com/allenai/scibert/tree/master/data
+https://github.com/microsoft/BioGPT/tree/main/data
+
+a chem-disease-gene 18 relationships overall, only two for gene->disease
+https://github.com/chanzuckerberg/ChemDisGene/tree/master
+https://www.semanticscholar.org/reader/d91f66bc5dc644d5e29ad291afe2c950747aaaa1
+
+sciBERT usage
+https://guptayash2010.medium.com/text-classification-with-scibert-a285d2f2db06
+https://analyticsindiamag.com/guide-to-scibert-a-pre-trained-bert-based-language-model-for-scientific-text/
+
