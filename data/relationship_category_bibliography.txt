@@ -1,10 +1,27 @@
 GENE->DISEASE
+-RENET2
+https://academic.oup.com/nargab/article/3/3/lqab062/6315218
+download data of parsed pubmed: http://www.bio8.cs.hku.hk/RENET2/renet2_data_models.tar.gz
+-GAD, (large corpus of GWAS associations with sentences)
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-022-04646-6
+https://github.com/GDAMining/gda-extraction/
 
 DRUG->PROTEIN
 the below is the DTI original refs from bioGPT
 https://www.dropbox.com/sh/0e52w6p7wiek9ab/AADfoBOTAUOJOaP6Yxfq75R-a?dl=0&lst=
 https://academic.oup.com/bioinformatics/article/38/22/5100/6751771
 
+SPECIES INFERENCE
+https://www.frontiersin.org/articles/10.3389/fnhum.2020.00128/full#h7
+https://github.com/sssgrowth/SPECIESEXPLORER
+
+PROTEIN-PROTEIN INTERACTION
+-PEDL, which is pip installable, and looks up any protein
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7355289/
+https://github.com/leonweber/pedl
+
+GENE CLASSIFICATION
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7563092/ -NO GITHUB
 
 GOOD RESOURCES THAT CONTAIN ALL TYPES
 https://github.com/allenai/scibert/tree/master/data
@@ -18,3 +35,8 @@ sciBERT usage
 https://guptayash2010.medium.com/text-classification-with-scibert-a285d2f2db06
 https://analyticsindiamag.com/guide-to-scibert-a-pre-trained-bert-based-language-model-for-scientific-text/
 
+ANNOTATED DATASETS
+-BIORED, all type of relations on 600 pubmed abstracts
+https://academic.oup.com/bib/article/23/5/bbac282/6645993
+https://ftp.ncbi.nlm.nih.gov/pub/lu/BioRED/
+https://github.com/ncbi/bert_gt - trained bioBERT model here but not downloadadble have to do yourself
