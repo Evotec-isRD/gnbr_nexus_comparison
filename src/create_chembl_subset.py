@@ -1,14 +1,19 @@
 import pandas as pd
+import pickle
 
-df = pd.read_pickle('/Users/charliejeynes/PycharmProjects/gnbr_nexus_comparison/data/df_nx_protein_level_averages_with_chemical_names.pkl')
-df = df.explode(column='chem_name')
-df_chembl = df[df.chem_name.str.contains('chembl', na=False)]
-df_chembl = df_chembl.explode(column=['TARGET_NAME'])
-#
-#
-df_test = df.loc[0:100, :]
-# df_test = df_test.explode(column='chem_name')
-# df_chembl = df_test[df_test.chem_name.str.contains('chembl', na=False)]
-# df_chembl_unq = df_chembl.drop_duplicates(subset=['chem_name', 'UNIPROT_ACCESSION_NUMBERS'])
-df_chembl_unq = df_chembl.drop_duplicates(subset=['chem_name', 'TARGET_NAME'])
-df_chembl_unq_sub = df_chembl_unq.loc[0:100, :]
+df = pd.read_pickle('data/df_nx_protein_level_averages_with_chemical_names.pkl')
+
+def check_if_chembl_id(row: list) -> bool:
+    bools = []
+    for chem in row:
+        chem = str(chem)
+        if chem.find('chembl') != -1:
+            bools.append(True)
+        else:
+            bools.append(False)
+    return any(bools)
+
+df['in_chembl'] = df.chem_name.apply(check_if_chembl_id)
+df_chembl = df[df['in_chembl']]
+df_chembl = df_chembl.drop(columns='in_chembl')
+df_chembl.to_pickle('data/chembl_vs_gnbr.pkl')
