@@ -22,9 +22,14 @@ and Nexus raw data for activities such as entity normalisation, then others for 
 ## Dependencies 
 The library dependencies are in "requirements.txt"
 
-By default, the code will run (executing from main.py) using data file dependencies that are a sub-set
+By default, the code will run (executing from main.py) using data file dependencies that are a subset of 
+Evotec's "Nexus" small-molecule protein target interaction database. This is a ChEMBL subset: only small moelcules that are
+in ChEMBL that have a 'action_type' (mechanism of action between a small molecule and a protein) are included in the 
+outputs. This subset is necessary because Nexus contains proprietary information, whereas ChEMBL data is freely
+available. 
 
-There are several data files which are pre-requisites for the code to run. Where appropriate the external links 
+For running the code with the full Nexus data, 
+there are several data files which are pre-requisites. Where appropriate the external links 
 to these files are provided. These need to be downloaded toa  "./data" directory that will have to be created locally. 
 1. From the [GNBR database (version 7 2019)](https://zenodo.org/record/3459420#.Y8pCz3bP2Uk) the files 
 **'part-ii-dependency-paths-chemical-gene-sorted-with-themes.txt.gz'** and **'part-i-chemical-gene-path-theme-distributions.txt.gz'**. 

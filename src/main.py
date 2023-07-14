@@ -26,21 +26,15 @@ CLEAN_SAVE_CHEMBL_GNBR_MERGE = False
 def main():
     ##### processing scripts #####
     if CHEMBL_SUBSET:
-        # nx_gnbr_merged = pd.read_pickle('data/df_gnbr_with_themes_not_normalised_merged_to_chembl_161k.pkl')
         nx_gnbr_merged = pd.read_pickle('data/chembl_gnbr_merged.pkl')
     else:
-        # if CHEMBL_SUBSET:
-        #     nexus = pd.read_pickle('data/chembl_vs_gnbr.pkl')
-        # else:
         nexus = nexus_preprocess.main()
-
         if GNBR_PREPROCESSED:
             gnbr = pd.read_parquet('data/df_gnbr_withThemesmapped_selectedCols.parquet')
         else:
             gnbr = gnbr_preprocess.main()
 
         nx_gnbr_merged = merge_nexus_gnbr.main(gnbr, nexus) # note : this is an inner merge
-
 
     ##### plotting scripts #####
     if not CHEMBL_SUBSET:
@@ -63,7 +57,6 @@ def main():
         chembl_mechs = pd.read_csv('data/chembl_action-type_all.csv')
 
         # merge
-
         chembl_gnbr_merged = nx_gnbr_merged.merge(chembl_mechs,
                                                   on=['uniprotID', 'molecule_chembl_id'],
                                                   how='right')
