@@ -22,6 +22,8 @@ and Nexus raw data for activities such as entity normalisation, then others for 
 ## Dependencies 
 The library dependencies are in "requirements.txt"
 
+By default, the code will run (executing from main.py) using data file dependencies that are a sub-set
+
 There are several data files which are pre-requisites for the code to run. Where appropriate the external links 
 to these files are provided. These need to be downloaded toa  "./data" directory that will have to be created locally. 
 1. From the [GNBR database (version 7 2019)](https://zenodo.org/record/3459420#.Y8pCz3bP2Uk) the files 

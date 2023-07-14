@@ -95,7 +95,7 @@ def my_merge(df_gnbr: pd.DataFrame, df_nx: pd.DataFrame) -> pd.DataFrame:
     return df_mg
 
 
-def main(gnbr: pd.DataFrame, nexus: pd.DataFrame, CHEMBL_SUBSET: bool) -> pd.DataFrame:
+def main(gnbr: pd.DataFrame, nexus: pd.DataFrame) -> pd.DataFrame:
     """
     The pipeline here is to make the gnbr and nexus dataframes compatible for merging renaming columns.
     The file is then saved into a data dir as df_gnbr_with_themes_not_normalised_merged_to_nexus_169k.pkl
@@ -104,10 +104,8 @@ def main(gnbr: pd.DataFrame, nexus: pd.DataFrame, CHEMBL_SUBSET: bool) -> pd.Dat
     :param: nexus is nexus data
     :returns: merged nexus and gnbr data
     """
-    if CHEMBL_SUBSET:
-        nx_gnbr_merged_filepath = './data/df_gnbr_with_themes_not_normalised_merged_to_chembl_161k.pkl'
-    else:
-        nx_gnbr_merged_filepath = './data/df_gnbr_with_themes_not_normalised_merged_to_nexus_169k.pkl'
+
+    nx_gnbr_merged_filepath = './data/df_gnbr_with_themes_not_normalised_merged_to_nexus_169k.pkl'
 
     if (os.path.exists(nx_gnbr_merged_filepath)): # for the Venn diagrams I want to merge outer
         logger.info('loading merged nexus and gnbr data from ..data/df_gnbr_with_themes_not_normalised_merged_to_nexus_169k.pkl')
