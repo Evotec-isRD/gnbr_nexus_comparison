@@ -22,11 +22,11 @@ and Nexus raw data for activities such as entity normalisation, then others for 
 ## Dependencies 
 The library dependencies are in "requirements.txt"
 
-By default, the code will run (executing from main.py) using data file dependencies that are a subset of 
-Evotec's "Nexus" small-molecule protein target interaction database. This is a ChEMBL subset: only small moelcules that are
+**By default, the code will run (executing from src/main.py) using data file dependencies that are a subset of 
+Evotec's "Nexus" small-molecule protein target interaction database. This is a ChEMBL subset: only small molecules that are
 in ChEMBL that have a 'action_type' (mechanism of action between a small molecule and a protein) are included in the 
 outputs. This subset is necessary because Nexus contains proprietary information, whereas ChEMBL data is freely
-available. 
+available.** 
 
 For running the code with the full Nexus data, 
 there are several data files which are pre-requisites. Where appropriate the external links 
@@ -51,7 +51,8 @@ Nexus data processed to include a compound ID with all known name synonyms of th
 ## Instructions on running the code
 1. Clone this project using your standard process
 2. pip install the dependencies: "pip install -r requirements.txt" (use python=3.9)
-3. run the main.py file: "python src/main.py" (this could take up to 30 minutes to run - watch the log!)
+3. run the main.py file: "python src/main.py" (as it runs you will have to close the figures as they 
+pop up to go to completion)
 
 ## Outputs
 There should be several outputs on running the script:
