@@ -26,7 +26,8 @@ The library dependencies are in "requirements.txt"
 Evotec's "Nexus" small-molecule protein target interaction database. This is a ChEMBL subset: only small molecules that are
 in ChEMBL that have a 'action_type' (mechanism of action between a small molecule and a protein) are included in the 
 outputs. This subset is necessary because Nexus contains proprietary information, whereas ChEMBL data is freely
-available.** 
+available. We have made this dataset available as a csv file which can be found at 10.5281/zenodo.8136752 (the same data
+is used to run the code from src/main.py as a .pkl file** 
 
 For running the code with the full Nexus data, 
 there are several data files which are pre-requisites. Where appropriate the external links 
